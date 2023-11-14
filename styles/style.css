@@ -1,0 +1,66 @@
+/* header section starts */
+.overlay {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  width: 100%;
+}
+
+.overlay.active {
+  position: fixed;
+  background-color: black;
+  top: 0;
+  padding: 20px;
+}
+
+.overlay.active::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+}
+
+.header .bars {
+  padding: 8px;
+  background-color: black;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.header .bars-holder {
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.header .bars .bars-holder span {
+  display: block;
+  height: 4px;
+  background-color: white;
+}
+
+/* header section ends */
+
+/* landing section starts */
+.landing {
+  height: 100vh;
+  position: relative;
+}
+
+.landing>div {
+  width: 50%;
+  background-clip: border-box;
+  background-size: cover;
+}
+
+.landing .left {
+  background-image: url('../assets/background_1.png')
+}
+
+.landing .right {
+  background-image: url('../assets/background_2.png')
+}
+
+/* landing section ends */
