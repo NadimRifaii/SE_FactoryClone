@@ -6,6 +6,7 @@ html {
   --color1: #363738;
   --color2: #fcfcfd;
   --color3: #28eea7;
+  --color4: #fb4747;
   --overlay-color1: rgba(20 238 167/93%);
   --overlay-color2: rgba(251, 80, 142, 0.93);
   --overlay-color3: rgba(152, 100, 218, 0.93);
@@ -129,12 +130,34 @@ html {
   margin-bottom: 10px;
 }
 
+.landing .top-box .buttons .button {
+  display: block;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.landing .top-box .buttons .button.green {
+  background-color: var(--color3);
+  color: black;
+}
+
+.landing .top-box .buttons .button.red {
+  background-color: var(--color4);
+}
+
 .landing .container .links .bottom-box {
   display: flex;
   align-items: center;
   background-color: #31b7f0;
   padding: 20px;
   gap: 20px;
+}
+
+.landing .container .links li a.active {
+  color: var(--color3);
 }
 
 .landing .container .links .bottom-box .text {
@@ -246,7 +269,7 @@ html {
   }
 
   .landing.active::before {
-    height: 200%;
+    height: 165%;
   }
 
   .landing .container .links.links.active {
@@ -255,7 +278,12 @@ html {
   }
 
   .landing .container .links .right {
-    width: 100%
+    width: 100%;
+    gap: 50px;
+  }
+
+  .landing .container .links .right .bottom-box {
+    flex-direction: column;
   }
 }
 
