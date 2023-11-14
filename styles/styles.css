@@ -1,0 +1,178 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color1: #363738;
+  --color2: #fcfcfd;
+  --color3: #28eea7;
+  --overlay-color1: rgba(20 238 167/93%);
+  --overlay-color2: rgba(251, 80, 142, 0.93);
+  --overlay-color3: rgba(152, 100, 218, 0.93);
+}
+
+/* landing section starts */
+.landing {
+  position: relative;
+}
+
+.landing .container {
+  position: relative;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.landing .container .header {
+  position: absolute;
+  top: 40px;
+  left: 15px;
+  width: calc(100% - 30px);
+  z-index: 2;
+}
+
+.landing .container .header .nav .bars {
+  padding: 10px;
+  background-color: var(--color1);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.landing .container .header .nav .bars-holder {
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.landing .container .header .nav .bars-holder span {
+  display: block;
+  background-color: white;
+  width: 100%;
+  height: 4px;
+}
+
+.landing .container .header .links {
+  display: none;
+}
+
+.landing .container .header .links.active {
+  display: unset
+}
+
+.landing .heroes-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  top: 0;
+  flex-wrap: wrap;
+}
+
+.landing .heroes-container .hero {
+  width: 50%;
+  background-size: cover;
+  background-clip: border-box;
+  position: relative;
+  padding: 60px;
+}
+
+.landing .heroes-container .hero .info-holder {
+  position: relative;
+  z-index: 2;
+  color: var(--color2)
+}
+
+.landing .heroes-container .hero.left .info-holder {
+  color: var(--color1);
+}
+
+.landing .heroes-container .hero h2 {
+  font-size: 24px;
+  padding: 2px 10px;
+  width: fit-content
+}
+
+.landing .heroes-container .hero h1 {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  font-size: 36px;
+}
+
+.landing .heroes-container .hero:first-of-type .info-holder :where(h2, a) {
+  background-color: var(--color1);
+  color: var(--color2);
+  margin-left: auto;
+}
+
+.landing .heroes-container .hero:last-of-type .info-holder :where(h2, a) {
+  background-color: var(--color2);
+  color: var(--color1);
+  margin-right: auto;
+}
+
+.landing .heroes-container .hero .info-holder a {
+  padding: 15px 20px;
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  width: fit-content;
+}
+
+.landing .heroes-container .hero::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #00000087;
+}
+
+.landing .heroes-container .hero.left::before {
+  background-color: var(--overlay-color1);
+}
+
+.landing .heroes-container .hero.left {
+  background-image: url('../assets/background_1.png');
+  text-align: right;
+}
+
+.landing .heroes-container .hero.right {
+  background-image: url('../assets/background_2.png');
+}
+
+.landing .heroes-container .info-holder p {
+  font-size: 18px;
+  max-height: 122px;
+  margin: 50px auto;
+}
+
+@media (max-width:991px) {
+  .landing .heroes-container .hero {
+    width: 100%;
+    height: 80vh;
+  }
+}
+
+@media (max-width:767px) {
+  .landing .heroes-container .hero {
+    padding: 60px 10px;
+  }
+
+  .landing .heroes-container .hero h2 {
+    font-size: 18px;
+  }
+
+  .landing .heroes-container .hero h1 {
+    font-size: 24px;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .landing .heroes-container .hero .info-holder a {
+    padding: 10px;
+  }
+}
+
+/* landing section ends */
