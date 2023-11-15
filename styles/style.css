@@ -3,16 +3,30 @@
   position: absolute;
   top: 20px;
   left: 0;
-  bottom: 0;
   z-index: 5;
   width: 100%;
 }
 
 .overlay.active {
+  bottom: 0;
+}
+
+:root {
+  --color1: #363738;
+  --color2: #fcfcfd;
+  --color3: #28eea7;
+  --color4: #fb4747;
+  --overlay-color1: rgba(20 238 167/93%);
+  --overlay-color2: rgba(251, 80, 142, 0.93);
+  --overlay-color3: rgba(152, 100, 218, 0.93);
+}
+
+.overlay.active {
   position: fixed;
-  background-color: black;
+  background-color: rgba(35 35 35 /90%);
   top: 0;
   padding: 20px;
+  backdrop-filter: blur(10px)
 }
 
 .overlay.active::before {
@@ -23,7 +37,7 @@
 
 .header .bars {
   padding: 8px;
-  background-color: black;
+  background-color: var(--color1);
   border-radius: 6px;
   cursor: pointer;
 }
@@ -47,12 +61,15 @@
 .landing {
   height: 100vh;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .landing>div {
   width: 50%;
   background-clip: border-box;
   background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 .landing .left {
@@ -61,6 +78,93 @@
 
 .landing .right {
   background-image: url('../assets/background_2.png')
+}
+
+.landing .box {
+  padding: 40px;
+  position: relative;
+  z-index: 3;
+}
+
+.landing>div::before {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.landing .left .box {
+  text-align: right;
+  position: relative;
+}
+
+.landing .right::before {
+  background-color: #0000004d
+}
+
+.landing .left::before {
+  background-color: var(--overlay-color1)
+}
+
+.landing .box h2,
+.landing .box h2 {
+  padding: 2px 10px;
+  width: fit-content;
+}
+
+.landing .left .box h2 {
+  background-color: var(--color1);
+  color: var(--color2);
+  margin-left: auto;
+}
+
+.landing .right .box h2 {
+  background-color: var(--color2);
+  color: var(--color1);
+}
+
+.landing .left .box h1,
+.landing .right .box h1 {
+  margin: 20px 0;
+  font-size: 36px
+}
+
+.landing .right .box h1 {
+  color: var(--color2)
+}
+
+.landing .box p {
+  color: white;
+  font-weight: bold;
+}
+
+.landing .box .button a {
+  display: block;
+  margin: 20px;
+  background-color: var(--color1);
+  width: fit-content;
+  padding: 10px;
+  cursor: pointer;
+  background: var(--color2);
+  color: var(--color1);
+  font-weight: bold;
+}
+
+.landing .left .box a {
+  margin-left: auto;
+  color: var(--color2);
+  background-color: var(--color1);
+}
+
+@media (max-width:991px) {
+  .landing>div {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
 }
 
 /* landing section ends */
