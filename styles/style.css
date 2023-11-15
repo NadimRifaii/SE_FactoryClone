@@ -1,10 +1,13 @@
 :root {
   --color1: #363738;
   --color2: #fcfcfd;
-  --color3: #28eea7;
   --color4: #fb4747;
   --color5: #31b7f0;
   --color6: #f1f2f3;
+  --color3: #28eea7;
+  --color7: #ffc635;
+  --color8: #9864da;
+  --color9: #fb508e;
   --overlay-color1: rgba(20 238 167/93%);
   --overlay-color2: rgba(251, 80, 142, 0.93);
   --overlay-color3: rgba(152, 100, 218, 0.93);
@@ -373,6 +376,10 @@ span.arrow {
   background-color: var(--color1);
 }
 
+.bullets .bullet.white {
+  background-color: var(--color2);
+}
+
 .bullets .bullet.grey {
   background-color: grey
 }
@@ -530,3 +537,162 @@ iframe {
 }
 
 /* milestone sction ends */
+
+/* programs section starts */
+.fcs {
+  color: var(--color7);
+}
+
+.fcs-background {
+  background-color: var(--color7);
+}
+
+.fsw {
+  color: var(--color3);
+}
+
+.fsw-background {
+  background-color: var(--color3);
+}
+
+.fsd {
+  color: var(--color8);
+}
+
+.fsd-background {
+  background-color: var(--color8);
+}
+
+.uiux {
+  color: var(--color9);
+}
+
+.ui-ux {
+  background-color: var(--color9)
+}
+
+.programs {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.programs .main-programs {
+  height: 100vh;
+}
+
+.programs .hello h2 {
+  background-color: var(--color1);
+  color: var(--color2);
+  padding: 10px 15px;
+}
+
+.programs ul {
+  margin-top: 50px;
+}
+
+.programs ul li {
+  padding: 20px 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.programs ul li.active {
+  background-color: var(--color1);
+}
+
+.programs ul li:first-of-type.active,
+.programs .program:first-of-type .arrow {
+  color: var(--color7);
+}
+
+.programs ul li:nth-of-type(2).active,
+.programs .program:nth-of-type(2) .arrow {
+  color: var(--color3);
+}
+
+.programs ul li:nth-of-type(3).active,
+.programs .program:nth-of-type(3) .arrow {
+  color: var(--color8);
+}
+
+.programs ul li:last-of-type.active,
+.programs .program:last-of-type .arrow {
+  color: var(--color9);
+}
+
+.programs .program {
+  padding: 20px;
+  background-color: var(--color1);
+  color: var(--color2);
+}
+
+.programs .program .info {
+  width: 650px;
+}
+
+.programs .program .image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 1;
+  height: 400px;
+}
+
+.programs .program:first-of-type .image {
+  background-image: url('../assets/programs_fcs.png')
+}
+
+.programs .program:nth-of-type(2) .image {
+  background-image: url('../assets/programs_fsw.png')
+}
+
+.programs .program:nth-of-type(3) .image {
+  background-image: url('../assets/programs_fsd.png')
+}
+
+.programs .program:last-of-type .image {
+  background-image: url('../assets/programs_uiUx.png')
+}
+
+.programs .main-programs {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.programs .program {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  transition: .3s;
+  width: 100%;
+  padding: 20px;
+}
+
+.programs .program .info {
+  padding: 20px;
+  position: relative
+}
+
+.programs .program.active {
+  opacity: 1;
+  z-index: 3;
+}
+
+.programs .program h2 {
+  margin-bottom: 40px;
+}
+
+.programs .program p {
+  color: #dcdee1;
+  line-height: 1.5;
+}
+
+.programs .program .bottom-info {
+  position: absolute;
+  bottom: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+/* programs section ends */
