@@ -241,11 +241,11 @@ span.arrow {
   height: 100vh;
   position: relative;
   flex-wrap: wrap;
-
 }
 
 .landing>div {
   width: 50%;
+  height: 100%;
   background-clip: border-box;
   background-size: cover;
   background-position: center;
@@ -340,6 +340,10 @@ span.arrow {
 }
 
 @media (max-width:991px) {
+  .landing {
+    height: unset
+  }
+
   .landing>div {
     width: 100%;
     padding: 50px 10px;
@@ -349,3 +353,46 @@ span.arrow {
 }
 
 /* landing section ends */
+
+/* youtube section starts */
+.youtube {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.bullets {
+  gap: 10px;
+}
+
+.bullets .bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color1);
+}
+
+.bullets .bullet.grey {
+  background-color: grey
+}
+
+.bullets .bullet.green {
+  background-color: var(--color3)
+}
+
+.youtube-video {
+  margin-top: 50px;
+  padding: 10px;
+  background-color: var(--color3);
+  border-radius: 6px;
+  aspect-ratio: 16/9;
+}
+
+iframe {
+  display: block;
+  border: none;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* youtube section ends */
