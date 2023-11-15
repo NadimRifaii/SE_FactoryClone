@@ -1,3 +1,14 @@
+:root {
+  --color1: #363738;
+  --color2: #fcfcfd;
+  --color3: #28eea7;
+  --color4: #fb4747;
+  --color5: #31b7f0;
+  --overlay-color1: rgba(20 238 167/93%);
+  --overlay-color2: rgba(251, 80, 142, 0.93);
+  --overlay-color3: rgba(152, 100, 218, 0.93);
+}
+
 /* header section starts */
 .overlay {
   position: absolute;
@@ -7,18 +18,16 @@
   width: 100%;
 }
 
+body.active::-webkit-scrollbar {
+  display: none;
+}
+
 .overlay.active {
   bottom: 0;
 }
 
-:root {
-  --color1: #363738;
-  --color2: #fcfcfd;
-  --color3: #28eea7;
-  --color4: #fb4747;
-  --overlay-color1: rgba(20 238 167/93%);
-  --overlay-color2: rgba(251, 80, 142, 0.93);
-  --overlay-color3: rgba(152, 100, 218, 0.93);
+.overlay .container {
+  position: relative;
 }
 
 .overlay.active {
@@ -26,13 +35,159 @@
   background-color: rgba(35 35 35 /90%);
   top: 0;
   padding: 20px;
-  backdrop-filter: blur(10px)
+  backdrop-filter: blur(10px);
+
 }
 
 .overlay.active::before {
   content: '';
   position: absolute;
   width: 100%;
+}
+
+.links {
+  display: none;
+}
+
+.links.active {
+  display: unset;
+  position: absolute;
+  top: 80px;
+  height: calc(100vh - 47px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 97%;
+}
+
+.links.active :where(ul, div.right) {
+  flex-basis: 48%;
+}
+
+.links.active .right>div {
+  padding: 30px;
+}
+
+.links.active .right .top {
+  background-color: var(--color1)
+}
+
+.links li a {
+  display: block;
+  padding: 10px;
+  color: grey;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.links li a.active {
+  color: var(--color3);
+}
+
+span.arrow {
+  color: var(--color3)
+}
+
+.links .right>div {
+  border-radius: 20px;
+}
+
+.links .right h2 {
+  color: var(--color2)
+}
+
+.links .right p.name {
+  color: var(--color2);
+  margin: 20px auto;
+  font-weight: bold;
+}
+
+.links .right p {
+  line-height: unset
+}
+
+.links .right .top .info {
+  margin-bottom: 60px;
+  color: grey;
+  font-weight: bold;
+}
+
+.links .right .buttons-container button {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  font-weight: bold;
+  background-color: var(--color3);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.links .right .buttons-container button:last-child {
+  margin-top: 20px;
+  background-color: var(--color4);
+  color: white;
+}
+
+.links .right .bottom {
+  background-color: var(--color5);
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.links .right .bottom .logo {
+  width: fit-content;
+  margin: auto;
+}
+
+.links .right .bottom .text {
+  flex: 1;
+}
+
+.links .right .bottom h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.links .right .bottom p {
+  color: var(--color2);
+  font-size: 14px;
+}
+
+@media (max-width:992px) {
+  .links {
+    width: 80%;
+    margin: auto;
+    overflow-y: auto;
+    flex-direction: column;
+  }
+
+  .links.active {
+    top: 35px;
+  }
+
+  .links li a {
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+
+  .links .right .bottom {
+    flex-direction: column;
+  }
+
+  .links .right .bottom h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .links .right .top .info {
+    margin-bottom: 20px;
+  }
 }
 
 .header .bars {
@@ -42,11 +197,35 @@
   cursor: pointer;
 }
 
+.overlay.active .bars {
+  padding: 0;
+}
+
+
+.overlay.active .bars-holder span:nth-child(2) {
+  background-color: transparent;
+}
+
+.overlay.active .bars-holder span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.overlay.active .bars-holder span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.overlay.active .bars-holder span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
 .header .bars-holder {
   width: 25px;
   display: flex;
   flex-direction: column;
   gap: 5px;
+  position: relative;
 }
 
 .header .bars .bars-holder span {
@@ -62,6 +241,7 @@
   height: 100vh;
   position: relative;
   flex-wrap: wrap;
+
 }
 
 .landing>div {
@@ -70,6 +250,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  padding: 50px 10px;
 }
 
 .landing .left {
@@ -161,7 +342,7 @@
 @media (max-width:991px) {
   .landing>div {
     width: 100%;
-    padding: 10px;
+    padding: 50px 10px;
     font-weight: bold;
     cursor: pointer;
   }
