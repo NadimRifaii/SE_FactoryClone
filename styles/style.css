@@ -1153,3 +1153,26 @@ iframe {
 }
 
 /* contact us ends */
+
+/* partners section start */
+.partners {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.partners .partners-container {
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+
+.partners .partners-container img {
+  width: calc(90% /6)
+}
+
+@media (max-width:767px) {
+  .partners .partners-container img {
+    width: calc(90% /3)
+  }
+}
+
+/* partners section end */
