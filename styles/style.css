@@ -833,7 +833,7 @@ iframe {
 /* testimonials start */
 .testimonials {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 
 .testimonials .hello {
@@ -860,23 +860,9 @@ iframe {
   z-index: -1;
   position: absolute;
   top: 0;
-}
-
-.testimonials .slider-container>div:first-child {
   transform: translateX(-100%)
 }
 
-.testimonials .slider-container>div:nth-child(2) {
-  transform: translateX(-100%)
-}
-
-.testimonials .slider-container>div:nth-child(3) {
-  transform: translateX(-100%)
-}
-
-.testimonials .slider-container>div:nth-child(4) {
-  transform: translateX(-100%)
-}
 
 .testimonials .slider-container>div.active {
   opacity: 1;
