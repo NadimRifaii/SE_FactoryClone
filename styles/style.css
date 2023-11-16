@@ -759,3 +759,73 @@ iframe {
 }
 
 /* programs section ends */
+
+/* hire talent starts */
+.hire-talent {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--color1)
+}
+
+.hire-talent .hello {
+  margin-bottom: 50px;
+  color: var(--color2);
+}
+
+.hire-talent .hello h2 {
+  font-size: 24px;
+}
+
+.hire-talent .hire-info,
+.hire-talent .bottom-info {
+  padding: 40px;
+  color: var(--color2);
+  background-color: #232323;
+  border-radius: 20px;
+}
+
+.hire-talent .bottom-info {
+  margin-top: 40px;
+  padding: 20px 40px;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.hire-talent .hire-info :where(h2, .stats, p) {
+  padding-left: 23px;
+}
+
+.hire-talent .hire-info :where(.stats, .contact-us) {
+  margin: 10px auto;
+  background-color: var(--color1);
+  width: calc(100% - 23px);
+  padding: 10px 10px 10px 23px;
+  font-weight: bold;
+}
+
+.hire-talent .hire-info .contact-us {
+  text-align: right
+}
+
+.hire-talent .hire-info ol li {
+  color: #dcdee1;
+  margin-bottom: 10px;
+}
+
+@media (max-width:767px) {
+  .hire-talent .hire-info h2 {
+    font-size: 18px;
+  }
+
+  .hire-talent .hire-info :where(.stats, .contact-us) {
+    font-size: 14px;
+  }
+
+  .hire-talent .bottom-info {
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+/* hire talent ends */
