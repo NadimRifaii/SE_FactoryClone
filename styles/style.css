@@ -1176,3 +1176,42 @@ iframe {
 }
 
 /* partners section end */
+
+/* subscribe section starts */
+.subscribe {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--color1)
+}
+
+.subscribe h2 {
+  color: var(--color2);
+  font-size: 26px
+}
+
+.subscribe h2 .green {
+  color: var(--color3)
+}
+
+.subscribe .left p {
+  font-size: 14px;
+  margin-top: 10px;
+  color: grey;
+}
+
+.subscribe .right :where(input, button) {
+  padding: 15px 20px;
+  border: none;
+  display: block;
+  outline: none;
+  font-size: 18px;
+}
+
+.subscribe .right button {
+  background-color: #232323;
+  color: var(--color2);
+  font-weight: bold;
+  font-weight: bold;
+}
+
+/* subscribe section ends */
