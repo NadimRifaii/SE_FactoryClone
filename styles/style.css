@@ -13,6 +13,10 @@
   --overlay-color3: rgba(152, 100, 218, 0.93);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .hello {
   margin-bottom: 50px;
 }
@@ -88,6 +92,7 @@ body.active::-webkit-scrollbar {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 30px;
+  width: fit-content;
 }
 
 .links li a.active {
@@ -1083,6 +1088,7 @@ iframe {
   position: relative;
   padding-left: 30px;
   cursor: pointer;
+  color: var(--color2);
 }
 
 .contact .form .right .inputs-container .input label::before {
@@ -1252,9 +1258,13 @@ iframe {
   margin-bottom: 20px;
 }
 
-.footer .holder>div ul li {
+.footer .holder>div ul li a {
   margin-bottom: 20px;
   color: grey;
+}
+
+.footer .holder>div ul li {
+  margin-bottom: 20px;
 }
 
 .footer .holder>div .titles ul:last-child {
