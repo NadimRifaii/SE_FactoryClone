@@ -1,3 +1,4 @@
+const faqBox = document.querySelectorAll('.box')
 const bars = document.querySelector('.bars')
 const links = document.querySelector('.links')
 const overlay = document.querySelector('.overlay')
@@ -46,5 +47,10 @@ options.forEach((option, index) => {
     toggleClass(option, 'active')
     toggleClass(programElements[index], 'active')
     programs.style.backgroundColor = programsBackgroundClasses[index]
+  })
+})
+faqBox.forEach(box => {
+  box.addEventListener('click', () => {
+    toggleClass(box, 'active')
   })
 })

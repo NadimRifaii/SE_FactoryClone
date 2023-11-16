@@ -8,7 +8,7 @@ body {
   font-family: sans-serif
 }
 
-ul {
+ul:not(.faq ul) {
   list-style: none;
 }
 
