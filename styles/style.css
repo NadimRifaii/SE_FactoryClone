@@ -829,3 +829,125 @@ iframe {
 }
 
 /* hire talent ends */
+
+/* testimonials start */
+.testimonials {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.testimonials .hello {
+  margin-bottom: 50px;
+}
+
+.testimonials .slider-container {
+  overflow: hidden;
+  max-width: 1146px;
+  margin: auto;
+  position: relative;
+  min-height: 600px;
+}
+
+.testimonials .slider-container>div {
+  padding: 40px;
+  background-color: var(--color1);
+  color: var(--color2);
+  gap: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  transition: 1s;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+}
+
+.testimonials .slider-container>div:first-child {
+  transform: translateX(-100%)
+}
+
+.testimonials .slider-container>div:nth-child(2) {
+  transform: translateX(-100%)
+}
+
+.testimonials .slider-container>div:nth-child(3) {
+  transform: translateX(-100%)
+}
+
+.testimonials .slider-container>div:nth-child(4) {
+  transform: translateX(-100%)
+}
+
+.testimonials .slider-container>div.active {
+  opacity: 1;
+  z-index: 1;
+  left: 0;
+  transform: translateX(0px)
+}
+
+.testimonials .slider-container .info {
+  width: fit-content
+}
+
+.testimonials .slider-container .info+img {
+  width: 400px;
+  height: 400px;
+}
+
+.testimonials .slider-container .profile {
+  margin-top: 50px;
+  gap: 30px;
+}
+
+
+
+.testimonials .slider-container .small-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+
+}
+
+.testimonials .slider-controls {
+  width: fit-content;
+  margin: 20px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.testimonials .slider-controls span {
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 50%;
+  background-color: grey;
+  cursor: pointer;
+}
+
+.testimonials .slider-controls span.active {
+  background-color: var(--color1);
+}
+
+@media (max-width:992px) {
+  .testimonials .slider-container .person {
+    flex-direction: column;
+  }
+
+  .testimonials .slider-container .person .info+img {
+    height: 300px;
+  }
+}
+
+@media (max-width:767px) {
+  .testimonials .slider-controls {
+    display: none;
+  }
+
+  .testimonials .slider-container .person .info+img {
+    height: 150px;
+  }
+}
+
+/* testimonials end */
